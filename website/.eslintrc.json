@@ -74,7 +74,7 @@
       "extensions": [".jsx", ".js"]
     }],
     "react/jsx-closing-bracket-location": ["error", "after-props"],
-    "react/prefer-stateless-function": ["error", { "ignorePureComponents": true }],
+    "react/prefer-stateless-function": ["off"],
     "react/sort-comp": ["off", {
       "order": [
         "static-methods",
