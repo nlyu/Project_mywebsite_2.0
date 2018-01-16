@@ -1,0 +1,162 @@
+.App {
+    font-family: 'Lato', cursive;
+    margin: 0;
+    padding: 0;
+}
+
+.canvas {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.container {
+    margin: 0 auto;
+}
+
+.container p {
+
+}
+
+.container-left {
+    position: absolute;
+    width: 48.8%;
+    height: 100%;
+}
+
+.container-right {
+    position: absolute;
+    right: 0;
+
+    width: 51.2%;
+    height: 100%;
+
+    background-color: black;
+    opacity: 0.7;
+}
+
+.container-left p{
+    color: #4D4D4D;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+
+    right: 0;
+}
+
+.container-left i{
+    color: #4D4D4D;
+    margin: 0;
+    padding: 0;
+    cursor: pointer
+}
+
+.container-left i:hover{
+    color: #ff565d;
+    transition: color 0.5s ease;
+}
+
+.container-right p{
+    color: white;
+    margin-top: -40px;
+    margin-bottom: -40px;
+    padding: 0;
+    transition: background-color 1s ease;
+    cursor: pointer
+}
+
+.container-right p:hover{
+    background-color: #e2040e;
+    font-weight: bolder;
+}
+
+.app-home {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    color: white;
+    z-index: 100;
+    transition: color 1s ease;
+    cursor: pointer;
+}
+
+.app-home:hover {
+    color: #ff565d;
+}
+
+#app-name{
+    font-size: 5.5em;
+    font-weight: 100;
+    margin-top: 330px;
+    margin-bottom: 0;
+}
+
+#app-name-ch{
+    font-size: 5em;
+    font-weight: 900;
+    font-family: 'Microsoft YaHei';
+    margin-top: 250px;
+}
+
+#app-name-ch-1{
+    font-size: 2em;
+    margin: -10px;
+    color: #ff565d;
+}
+
+#app-welcome{
+    font-size: 2em;
+    font-family: 'Microsoft YaHei';
+    color: black;
+    margin-top: 425px;
+    right: -141.5px;
+    z-index: 100;
+}
+
+#app-welcome-1{
+    background-color: #4D4D4D;
+    color: white;
+}
+
+#app-welcome-2{
+    background-color: #ff565d;
+    color: white;
+}
+
+#app-social{
+    width: 150px;
+    margin-top: 470px;
+}
+
+#app-right-arts{
+    font-size: 6em;
+    font-family: 'Abril Fatface';
+
+    margin-top: 160px;
+}
+
+#app-right-thoughts{
+    font-size: 5em;
+    font-weight: 100;
+    font-family: 'Lato';
+}
+
+#app-right-projects{
+    font-size: 4em;
+    font-family: 'Open Sans';
+    margin-bottom: -30px;
+}
+
+#app-right-fun{
+    font-size: 5em;
+    font-family: 'Fontdiner Swanky';
+    margin-top: -30px;
+}
+
+#app-right-resume{
+    font-size: 3em;
+    font-weight: 100;
+    font-family: 'Lato';
+
+    margin-top: 50px;
+}
