@@ -132,7 +132,7 @@
     font-size: 6em;
     font-family: 'Abril Fatface';
 
-    margin-top: 160px;
+    margin-top: 150px;
 }
 
 #app-right-thoughts{
@@ -147,6 +147,12 @@
     margin-bottom: -30px;
 }
 
+#app-right-projects-1{
+    color: #f7222b;
+    font-size: 1.5em;
+    font-family: Abril Fatface;
+}
+
 #app-right-fun{
     font-size: 5em;
     font-family: 'Fontdiner Swanky';
@@ -158,5 +164,5 @@
     font-weight: 100;
     font-family: 'Lato';
 
-    margin-top: 50px;
+    margin-top: 45px;
 }

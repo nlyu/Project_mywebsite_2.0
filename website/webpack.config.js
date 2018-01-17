@@ -114,7 +114,7 @@ module.exports = function (env) {
                 // "file" loader for svg
                 // https://github.com/webpack-contrib/file-loader
                 {
-                    test: /\.svg$/,
+                    test: /\.(pdf|gif|png|jpe?g|svg)$/,
                     loader: 'file-loader',
                     query: {
                         name: 'static/media/[name].[hash:8].[ext]'

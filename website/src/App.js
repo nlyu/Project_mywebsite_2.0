@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { HashRouter, Switch, Route, Link } from 'react-router-dom';
 import Particles from 'react-particles-js';
-import { Icon } from 'semantic-ui-react';
+import { Icon, Popup } from 'semantic-ui-react';
 // import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 // import logo from './logo.svg';
 
@@ -11,6 +11,7 @@ import Project from './projects';
 import Thought from './thoughts';
 import Resume from './resume';
 import Fun from './fun';
+import ResumePdf from './file/Resume2018.pdf';
 
 import './css/App.css';
 import './css/animate.css';
@@ -56,6 +57,20 @@ class App extends Component {
     welcomePage() {
         const animationPulse = this.state.isHovered0 ? 'animated shake' : '';
         const animationRubber = this.state.isHovered1 ? 'animated rubberBand' : '';
+        const style = {
+            opacity: 0.7,
+            borderRadius: 0,
+            borderStyle: 'none',
+            boxShadow: 'none',
+            padding: '2em',
+            background: 'none',
+            top: '30px',
+            left: '50%',
+            color: 'white',
+            fontSize: '2vw',
+            fontFamily: 'Lato',
+            fontWeight: 100,
+        };
         return (
            // className="animated infinite bounce"
             <div>
@@ -71,40 +86,74 @@ class App extends Component {
                             <p id="app-welcome"><span id="app-welcome-1">欢迎侬好{'  '}</span><span id="app-welcome-2">{'  '}WELCOME</span></p>
                         </div>
                         <p id="app-social">
-                            <Icon name="wechat" size="big" />
-                            <Icon name="linkedin" size="big" />
-                            <Icon name="github square" size="big" />
-                            <Icon name="facebook" size="big" />
+                            <a href="https://www.linkedin.com/in/lyulyulyu/">
+                                <Icon name="linkedin" size="big" />
+                            </a>
+                            <a href="https://github.com/nlyu">
+                                <Icon name="github square" size="big" />
+                            </a>
+                            <a href="https://www.facebook.com/profile.php?id=100004339067411">
+                                <Icon name="facebook" size="big" />
+                            </a>
                         </p>
                     </div>
                 </div>
                 <HashRouter>
                     <div className="container-right">
-                        <Link to="/arts">
-                            <div onClick={this.handleClick}>
-                                <p id="app-right-arts">Arts</p>
-                            </div>
-                        </Link>
-                        <Link to="/thoughts">
-                            <div onClick={this.handleClick}>
-                                <p id="app-right-thoughts">THOUGHTS</p>
-                            </div>
-                        </Link>
-                        <Link to="/projects">
-                            <div onClick={this.handleClick}>
-                                <p id="app-right-projects">PROJECTS</p>
-                            </div>
-                        </Link>
-                        <Link to="/fun">
-                            <div onClick={this.handleClick}>
-                                <p id="app-right-fun">FUN</p>
-                            </div>
-                        </Link>
-                        <Link to="/resume">
-                            <div onClick={this.handleClick}>
-                                <p id="app-right-resume">RESUME</p>
-                            </div>
-                        </Link>
+                        <Popup
+                            trigger={<a href="https://www.pinterest.com/nlyu2/painting/">
+                                <div>
+                                    <p id="app-right-arts">Arts</p>
+                                </div>
+                            </a>}
+                            content="See my paintings in Pinterest"
+                            style={style}
+                            basic
+                            wide="very" />
+                        <Popup
+                            trigger={<Link to="/thoughts">
+                                <div onClick={this.handleClick}>
+                                    <p id="app-right-thoughts">THOUGHTS</p>
+                                </div>
+                            </Link>}
+                            content="Books & Notes & Knowledge"
+                            style={style}
+                            on="hover"
+                            basic
+                            wide="very" />
+                        <Popup
+                            trigger={<Link to="/projects">
+                                <div onClick={this.handleClick}>
+                                    <p id="app-right-projects">WHATam<span id="app-right-projects-1">I</span>DOING?</p>
+                                </div>
+                            </Link>}
+                            content="Everthing about me. Things done/doing."
+                            style={style}
+                            on="hover"
+                            basic
+                            wide="very" />
+                        <Popup
+                            trigger={<Link to="/fun">
+                                <div onClick={this.handleClick}>
+                                    <p id="app-right-fun">FUN</p>
+                                </div>
+                            </Link>}
+                            content="Games & Travels & Sports"
+                            style={style}
+                            on="hover"
+                            basic
+                            wide="very" />
+                        <Popup
+                            trigger={<a href={ResumePdf}>
+                                <div>
+                                    <p id="app-right-resume">RESUME</p>
+                                </div>
+                            </a>}
+                            content="Checkout PDF for resume 2018"
+                            style={style}
+                            on="hover"
+                            basic
+                            wide="very" />
                     </div>
                 </HashRouter>
             </div>
@@ -228,7 +277,7 @@ class App extends Component {
                             <Route exact path="/thoughts" component={Thought} />
                             <Route exact path="/resume" component={Resume} />
                             <Route exact path="/fun" component={Fun} />
-                            <Route render={this.welcomePage} />
+                            <Route exact path="/" render={this.welcomePage} />
                         </Switch>
                     </HashRouter>
                 </div>
