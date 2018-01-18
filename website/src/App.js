@@ -30,6 +30,28 @@ class App extends Component {
         this.handleHover1 = this.handleHover1.bind(this);
     }
 
+    componentWillMount() {
+        console.log('--1---');
+        console.log(this.props.location.pathname);
+        if (this.props.location.pathname !== '/') {
+            this.setState({
+                isToggleOn: true,
+            });
+        }
+    }
+
+    componentDidUpdate(previousProps) {
+        if (previousProps.location.pathname !== '/' &&
+            this.props.location.pathname === '/') {
+            this.setState({
+                isToggleOn: false,
+            });
+        }
+        console.log('------');
+        console.log(this.props.location.pathname);
+        console.log(previousProps.location.pathname);
+    }
+
     handleClick() {
         this.setState(prevState => ({
             isToggleOn: !prevState.isToggleOn,
@@ -55,8 +77,6 @@ class App extends Component {
     }
 
     welcomePage() {
-        const animationPulse = this.state.isHovered0 ? 'animated shake' : '';
-        const animationRubber = this.state.isHovered1 ? 'animated rubberBand' : '';
         const style = {
             opacity: 0.7,
             borderRadius: 0,
@@ -74,93 +94,69 @@ class App extends Component {
         return (
            // className="animated infinite bounce"
             <div>
-                <div className="container-left">
-                    <div>
+                <Popup
+                    trigger={<a href="https://www.pinterest.com/nlyu2/painting/">
                         <div>
-                            <p id="app-name-ch" className={animationPulse} onMouseEnter={this.handleHover0} onMouseLeave={this.handleHover0}><span id="app-name-ch-1">呂</span>诺晨</p>
+                            <p id="app-right-arts">Arts</p>
                         </div>
+                    </a>}
+                    content="See my paintings in Pinterest"
+                    style={style}
+                    basic
+                    wide="very" />
+                <Popup
+                    trigger={<Link to="/thoughts">
+                        <div onClick={this.handleClick}>
+                            <p id="app-right-thoughts">THOUGHTS</p>
+                        </div>
+                    </Link>}
+                    content="Books & Notes & Knowledge"
+                    style={style}
+                    on="hover"
+                    basic
+                    wide="very" />
+                <Popup
+                    trigger={<Link to="/projects">
+                        <div onClick={this.handleClick}>
+                            <p id="app-right-projects">WHATam<span id="app-right-projects-1">I</span>DOING?</p>
+                        </div>
+                    </Link>}
+                    content="Everthing about me. Things done/doing."
+                    style={style}
+                    on="hover"
+                    basic
+                    wide="very" />
+                <Popup
+                    trigger={<Link to="/fun">
+                        <div onClick={this.handleClick}>
+                            <p id="app-right-fun">FUN</p>
+                        </div>
+                    </Link>}
+                    content="Games & Travels & Sports"
+                    style={style}
+                    on="hover"
+                    basic
+                    wide="very" />
+                <Popup
+                    trigger={<a href={ResumePdf}>
                         <div>
-                            <p id="app-name" className={animationRubber} onMouseEnter={this.handleHover1} onMouseLeave={this.handleHover1}>Nuochen Lyu</p>
+                            <p id="app-right-resume">RESUME</p>
                         </div>
-                        <div>
-                            <p id="app-welcome"><span id="app-welcome-1">欢迎侬好{'  '}</span><span id="app-welcome-2">{'  '}WELCOME</span></p>
-                        </div>
-                        <p id="app-social">
-                            <a href="https://www.linkedin.com/in/lyulyulyu/">
-                                <Icon name="linkedin" size="big" />
-                            </a>
-                            <a href="https://github.com/nlyu">
-                                <Icon name="github square" size="big" />
-                            </a>
-                            <a href="https://www.facebook.com/profile.php?id=100004339067411">
-                                <Icon name="facebook" size="big" />
-                            </a>
-                        </p>
-                    </div>
-                </div>
-                <HashRouter>
-                    <div className="container-right">
-                        <Popup
-                            trigger={<a href="https://www.pinterest.com/nlyu2/painting/">
-                                <div>
-                                    <p id="app-right-arts">Arts</p>
-                                </div>
-                            </a>}
-                            content="See my paintings in Pinterest"
-                            style={style}
-                            basic
-                            wide="very" />
-                        <Popup
-                            trigger={<Link to="/thoughts">
-                                <div onClick={this.handleClick}>
-                                    <p id="app-right-thoughts">THOUGHTS</p>
-                                </div>
-                            </Link>}
-                            content="Books & Notes & Knowledge"
-                            style={style}
-                            on="hover"
-                            basic
-                            wide="very" />
-                        <Popup
-                            trigger={<Link to="/projects">
-                                <div onClick={this.handleClick}>
-                                    <p id="app-right-projects">WHATam<span id="app-right-projects-1">I</span>DOING?</p>
-                                </div>
-                            </Link>}
-                            content="Everthing about me. Things done/doing."
-                            style={style}
-                            on="hover"
-                            basic
-                            wide="very" />
-                        <Popup
-                            trigger={<Link to="/fun">
-                                <div onClick={this.handleClick}>
-                                    <p id="app-right-fun">FUN</p>
-                                </div>
-                            </Link>}
-                            content="Games & Travels & Sports"
-                            style={style}
-                            on="hover"
-                            basic
-                            wide="very" />
-                        <Popup
-                            trigger={<a href={ResumePdf}>
-                                <div>
-                                    <p id="app-right-resume">RESUME</p>
-                                </div>
-                            </a>}
-                            content="Checkout PDF for resume 2018"
-                            style={style}
-                            on="hover"
-                            basic
-                            wide="very" />
-                    </div>
-                </HashRouter>
+                    </a>}
+                    content="Checkout PDF for resume 2018"
+                    style={style}
+                    on="hover"
+                    basic
+                    wide="very" />
             </div>
         );
     }
 
     render() {
+        const animationPulse = this.state.isHovered0 ? 'animated shake' : '';
+        const animationRubber = this.state.isHovered1 ? 'animated rubberBand' : '';
+        const containerShiftLeft = this.state.isToggleOn ? 'container-left-2' : '';
+        const containerShiftRight = this.state.isToggleOn ? 'container-right-2' : '';
         return (
             <div className="App">
                 <Particles
@@ -270,16 +266,42 @@ class App extends Component {
                     }} />
                 {this.state.isToggleOn ? (<Nav />) : null}
                 <div className="container">
-                    <HashRouter>
-                        <Switch>
-                            <Route exact path="/arts" component={Art} />
-                            <Route exact path="/projects" component={Project} />
-                            <Route exact path="/thoughts" component={Thought} />
-                            <Route exact path="/resume" component={Resume} />
-                            <Route exact path="/fun" component={Fun} />
-                            <Route exact path="/" render={this.welcomePage} />
-                        </Switch>
-                    </HashRouter>
+                    <div className={`container-left ${containerShiftLeft}`}>
+                        <div>
+                            <div>
+                                <p id="app-name-ch" className={animationPulse} onMouseEnter={this.handleHover0} onMouseLeave={this.handleHover0}><span id="app-name-ch-1">呂</span>诺晨</p>
+                            </div>
+                            <div>
+                                <p id="app-name" className={animationRubber} onMouseEnter={this.handleHover1} onMouseLeave={this.handleHover1}>Nuochen Lyu</p>
+                            </div>
+                            <div>
+                                <p id="app-welcome"><span id="app-welcome-1">欢迎侬好{'  '}</span><span id="app-welcome-2">{'  '}WELCOME</span></p>
+                            </div>
+                            <p id="app-social">
+                                <a href="https://www.linkedin.com/in/lyulyulyu/">
+                                    <Icon name="linkedin" size="big" />
+                                </a>
+                                <a href="https://github.com/nlyu">
+                                    <Icon name="github square" size="big" />
+                                </a>
+                                <a href="https://www.facebook.com/profile.php?id=100004339067411">
+                                    <Icon name="facebook" size="big" />
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                    <div className={`container-right ${containerShiftRight}`}>
+                        <HashRouter>
+                            <Switch>
+                                <Route exact path="/arts" component={Art} />
+                                <Route exact path="/projects" component={Project} />
+                                <Route exact path="/thoughts" component={Thought} />
+                                <Route exact path="/resume" component={Resume} />
+                                <Route exact path="/fun" component={Fun} />
+                                <Route exact path="/" render={this.welcomePage} />
+                            </Switch>
+                        </HashRouter>
+                    </div>
                 </div>
                 <HashRouter>
                     <Link to="/">

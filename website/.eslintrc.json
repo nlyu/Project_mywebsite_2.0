@@ -73,6 +73,7 @@
     "react/jsx-filename-extension": ["error", {
       "extensions": [".jsx", ".js"]
     }],
+    "react/no-did-update-set-state": ["off"],
     "react/jsx-closing-bracket-location": ["error", "after-props"],
     "react/prefer-stateless-function": ["off"],
     "react/sort-comp": ["off", {
