@@ -47,6 +47,13 @@ class App extends Component {
                 isToggleOn: false,
             });
         }
+
+        if (previousProps.location.pathname === '/' &&
+            this.props.location.pathname !== '/') {
+            this.setState({
+                isToggleOn: true,
+            });
+        }
         console.log('------');
         console.log(this.props.location.pathname);
         console.log(previousProps.location.pathname);
@@ -265,7 +272,7 @@ class App extends Component {
                         width: '100%',
                     }} />
                 {this.state.isToggleOn ? (<Nav />) : null}
-                <div className="container">
+                <div className="container animated fadeIn">
                     <div className={`container-left ${containerShiftLeft}`}>
                         <div>
                             <div>

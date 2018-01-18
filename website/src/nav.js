@@ -8,8 +8,8 @@ class Nav extends Component {
     render() {
         return (
             <div>
-                <div className="Nav">
-                    <p id="app-social">
+                <div className="Footer animated slideInUp">
+                    <p>
                         <Icon name="wechat" /> 756259647
                     </p>
                     <p>lnc0519@gmail.com</p>

@@ -1,6 +1,7 @@
-.Nav {
+.Footer {
     position: fixed;
     width: 100%;
+    height: auto;
     left: 35%;
 
     font-family: Lato;
@@ -10,8 +11,11 @@
     color: white;
     bottom: 25px;
     z-index: 100;
+
+    transition: all 1s ease;
 }
 
-.Nav p{
+.Footer p{
     margin-bottom: 3px;
+    padding: 0px;
 }
