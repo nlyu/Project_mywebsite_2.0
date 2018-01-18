@@ -165,6 +165,13 @@ class App extends Component {
         const containerShiftLeft = this.state.isToggleOn ? 'container-left-2' : '';
         const containerShiftRight = this.state.isToggleOn ? 'container-right-2' : '';
         const welcomeShiftRight = this.state.isToggleOn ? 'app-welcome-right' : 'app-welcome';
+
+        const gitAddress = (<a href="https://github.com/nlyu/Project_mywebsite_2.0">
+            <p className="animated slideInUp" id="app-git-repo">
+                <Icon name="github square" size="big" /> Github file for this website
+            </p>
+        </a>);
+
         return (
             <div className="App">
                 <Particles
@@ -316,6 +323,7 @@ class App extends Component {
                         <Icon className="app-home animated slideInUp" name="home" size="huge" onClick={this.handleClickFalse} />
                     </Link>
                 </HashRouter>
+                {!this.state.isToggleOn ? gitAddress : null}
             </div>
         );
     }
