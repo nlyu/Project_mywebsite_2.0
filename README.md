@@ -2,9 +2,9 @@
 
 This is my new personal website in NodeJs and ReactJs
 
-The old website repo is: [https://github.com/nlyu/Projects_mywebsite]
+The old website repo is: [Project_mywebsite_1.o](https://github.com/nlyu/Projects_mywebsite)
 
-[lyulyulyu.com]
+[lyulyulyu.com](lyulyulyu.com)
 
 New website
 
