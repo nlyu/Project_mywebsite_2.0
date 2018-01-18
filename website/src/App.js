@@ -114,10 +114,10 @@ class App extends Component {
                 <Popup
                     trigger={<Link to="/thoughts">
                         <div onClick={this.handleClick}>
-                            <p id="app-right-thoughts">THOUGHTS</p>
+                            <p id="app-right-thoughts">KNOWLEDGE</p>
                         </div>
                     </Link>}
-                    content="Books & Notes & Knowledge"
+                    content="Books & CS & Business"
                     style={style}
                     on="hover"
                     basic
@@ -164,6 +164,7 @@ class App extends Component {
         const animationRubber = this.state.isHovered1 ? 'animated rubberBand' : '';
         const containerShiftLeft = this.state.isToggleOn ? 'container-left-2' : '';
         const containerShiftRight = this.state.isToggleOn ? 'container-right-2' : '';
+        const welcomeShiftRight = this.state.isToggleOn ? 'app-welcome-right' : 'app-welcome';
         return (
             <div className="App">
                 <Particles
@@ -282,7 +283,7 @@ class App extends Component {
                                 <p id="app-name" className={animationRubber} onMouseEnter={this.handleHover1} onMouseLeave={this.handleHover1}>Nuochen Lyu</p>
                             </div>
                             <div>
-                                <p id="app-welcome"><span id="app-welcome-1">欢迎侬好{'  '}</span><span id="app-welcome-2">{'  '}WELCOME</span></p>
+                                <p id={welcomeShiftRight}><span id="app-welcome-1">欢迎侬好{'  '}</span><span id="app-welcome-2">{'  '}WELCOME</span></p>
                             </div>
                             <p id="app-social">
                                 <a href="https://www.linkedin.com/in/lyulyulyu/">
@@ -312,7 +313,7 @@ class App extends Component {
                 </div>
                 <HashRouter>
                     <Link to="/">
-                        <Icon className="app-home" name="home" size="huge" onClick={this.handleClickFalse} />
+                        <Icon className="app-home animated slideInUp" name="home" size="huge" onClick={this.handleClickFalse} />
                     </Link>
                 </HashRouter>
             </div>
