@@ -1,0 +1,23 @@
+.Fun p, h1, h2, h3, h4, h5, h6{
+    pointer-events: none;
+    margin: 0;
+    padding: 0;
+}
+
+.fun-contentboard {
+    position: absolute;
+    width: 50%;
+    height: 70%;
+    right: 100px;
+
+    margin-top: 20px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.fun-contentboard p{
+    font-family: Lato;
+    font-weight: 100;
+
+    font-size: 1.5em;
+}
