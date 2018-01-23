@@ -13,3 +13,15 @@ New website
 Old website
 
 ![alt text](/old.png)
+ 
+ 
+# Installation & Run
+
+
+```
+ npm install
+```
+
+```
+ npm start
+```
