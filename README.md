@@ -4,7 +4,7 @@ This is my new personal website in NodeJs and ReactJs
 
 The old website repo is: [Project_mywebsite_1.0](https://github.com/nlyu/Projects_mywebsite)
 
-[lyulyulyu.com](lyulyulyu.com)
+[lyulyulyu.com](https://lyulyulyu.com)
 
 New website
 
