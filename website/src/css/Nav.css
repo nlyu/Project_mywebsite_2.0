@@ -19,3 +19,9 @@
     margin-bottom: 3px;
     padding: 0px;
 }
+
+#footerscroll {
+    margin-left: 250px;
+    font-size: 1em;
+    color: yellow;
+}

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { HashRouter, Switch, Route, Link } from 'react-router-dom';
 import Particles from 'react-particles-js';
 import { Icon, Popup } from 'semantic-ui-react';
+
 // import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 // import logo from './logo.svg';
 
@@ -125,7 +126,7 @@ class App extends Component {
                 <Popup
                     trigger={<Link to="/projects">
                         <div onClick={this.handleClick}>
-                            <p id="app-right-projects">WHATam<span id="app-right-projects-1">I</span>DOING?</p>
+                            <p id="app-right-projects">PROJECTs<span id="app-right-projects-1">I</span>DONE</p>
                         </div>
                     </Link>}
                     content="Everthing about me. Things done/doing."
@@ -168,7 +169,7 @@ class App extends Component {
 
         const gitAddress = (<a href="https://github.com/nlyu/Project_mywebsite_2.0">
             <p className="animated slideInUp" id="app-git-repo">
-                <Icon name="github square" size="big" /> Github file for this website
+                <Icon name="github square" size="big" /> Github source code for this website 源代码链接
             </p>
         </a>);
 
@@ -179,7 +180,7 @@ class App extends Component {
                     params={{
                         particles: {
                             number: {
-                                value: 50,
+                                value: 45,
                                 density: {
                                     enable: true, value_area: 700,
                                 },

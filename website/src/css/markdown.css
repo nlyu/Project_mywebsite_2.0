@@ -1,0 +1,57 @@
+#markdown pre {
+  margin: 0;
+  background-color: grey;
+  padding: 5px;
+  margin: 20px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+#markdown li {
+  color: #a3c3f7;
+}
+
+#markdown code {
+  background-color: #f73b3b;
+  width: 150%;
+  height: 150%;
+  color: white;
+  margin: 0px 3px;
+  border-radius: 5px;
+}
+
+#markdown h1,
+#markdown h2{
+  font-weight: 300;
+  margin-top: 80px;
+  color: #f73b3b;
+}
+
+#markdown h3,
+#markdown h4,
+#markdown h6 {
+  margin-top: 30px;
+  font-weight: 300;
+  color: #f73b3b;
+}
+
+#markdown h5 {
+  color: white;
+  font-size: 1.3em;
+  margin-top: 20px;
+}
+
+#markdown p {
+    font-size: 1.1em;
+}
+
+#markdown a{
+  font-weight: 300;
+  font-size: 13px;
+}
+
+#markdown img {
+  width: 280px;
+  border-radius: 20px;
+  margin: 15px 15px;
+}

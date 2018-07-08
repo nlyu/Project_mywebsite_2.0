@@ -3,9 +3,12 @@
   "dependencies": {
     "Particleground.js": "^1.1.0",
     "animate.css-js": "0.0.9",
+    "axios": "^0.18.0",
+    "markdown-react-js": "^1.0.0",
     "react": "^16.2.0",
     "react-addons-css-transition-group": "^15.6.2",
     "react-dom": "^16.2.0",
+    "react-markdown": "^3.3.4",
     "react-particles": "0.0.3",
     "react-particles-js": "^2.1.0",
     "react-router-dom": "^4.2.2",
