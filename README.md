@@ -1,8 +1,8 @@
-# Project_mywebsite_2.0
+# Project_mywebsite_2.0 用github写个人网站，“无后段网页开发”
 
 Link to new website: [lyulyulyu.com ver2.0](lyulyulyu.com)
 
-This is my new personal website in NodeJs and ReactJs
+This is my new personal website in NodeJs and ReactJs. Most most interesting feature is to use github issue to post data. Zerooooooo backend. Everthing is in the front. All of the data are stored in github issue page.
 
 The old website repo is: [Project_mywebsite_1.0](https://github.com/nlyu/Projects_mywebsite)
 
