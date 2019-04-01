@@ -6,6 +6,8 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 var InterpolateHtmlPlugin = require('react-dev-utils/InterpolateHtmlPlugin');
 var autoprefixer = require('autoprefixer');
 
+const PORT = process.env.PORT || 3000;
+
 /**
  * webpack.config.js 可以 export 一个 object，或者是一个 env 为参数的 function
  */
@@ -172,7 +174,7 @@ module.exports = function (env) {
             hot: true,
             contentBase: path.join(__dirname, "public"),
             compress: true,
-            port: 9000,
+            port: PORT,
             publicPath: '/',
             // 设置代理，比如，请求 /api/abc 会代理制 http://localhost:7000/abc
             // https://webpack.js.org/configuration/dev-server/#devserver-proxy

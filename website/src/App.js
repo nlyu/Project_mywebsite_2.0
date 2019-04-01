@@ -173,6 +173,12 @@ class App extends Component {
             </p>
         </a>);
 
+        const oldWebsite = (<a href="http://nlyu2.web.engr.illinois.edu/">
+            <p className="animated slideInUp" id="old-website">
+                <Icon name="thumbs up outline" size="big" /> Old Website lyulyulyu.com ver1.0 旧网址链接
+            </p>
+        </a>);
+
         return (
             <div className="App">
                 <Particles
@@ -325,6 +331,7 @@ class App extends Component {
                     </Link>
                 </HashRouter>
                 {!this.state.isToggleOn ? gitAddress : null}
+                {!this.state.isToggleOn ? oldWebsite : null}
             </div>
         );
     }

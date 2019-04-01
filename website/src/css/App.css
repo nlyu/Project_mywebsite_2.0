@@ -199,5 +199,16 @@
 
     font-family: Lato;
     font-weight: 100;
-    font-size: 1.5em;
+    font-size: 1.0em;
+}
+
+#old-website {
+    color: white;
+    position: absolute;
+    bottom: 70px;
+    left: 50%;
+
+    font-family: Lato;
+    font-weight: 100;
+    font-size: 1.0em;
 }
