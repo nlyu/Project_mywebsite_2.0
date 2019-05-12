@@ -11,5 +11,5 @@ require('webpack-dev-server/bin/webpack-dev-server');
 
 setTimeout(
     openBrowser.bind(null, '0.0.0.0:' + config.devServer.port),
-    2000
+    5000
 );
