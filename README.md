@@ -8,7 +8,7 @@
 
 后来。。后来发现果然这个根本前人已经在做了。天猫的招聘界面就是用github nodejs搭建的，淘宝也是。有点遗憾和开心。谢谢你来看我的github哈，如果有什么建议请务必告诉我。
 
-Link to new website: [lyulyulyu.com ver2.0](lyulyulyu.com)
+Link to new website: [lyulyulyu.com ver2.0](https://www.lyulyulyu.com)
 
 This is my new personal website in NodeJs and ReactJs. Most most interesting feature is to use github issue to post data. Zerooooooo backend. Everthing is in the front. All of the data are stored in github issue page.
 
