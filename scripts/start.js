@@ -7,6 +7,7 @@ const config = require('../webpack.config')();
 
 process.env.NODE_ENV = 'development';
 
+console.log("--------open in port-----------: " + config.devServer.port)
 require('webpack-dev-server/bin/webpack-dev-server');
 
 setTimeout(
