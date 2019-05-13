@@ -1,6 +1,10 @@
 # Project_mywebsite_2.0 
-# 用github写个人网站，“无后端网页开发”
 
+* 2019/2/10: This website is outmoded, now my personal website is ver3.0[url here](https://www.lyulyulyu.com)
+* 2019/5/1: Update this project again, fix bugs for volunrability. Heroku crush and header not found problem.
+
+# 用github写个人网站，“无后端网页开发” 
+Link to this website: [lyulyulyu.com ver2.0](https://lyulyulyu-2.herokuapp.com/#/)  
 这是一个试水玩票性质project，本来老的博客和个人网站是用静态html和ruby on rail开发的。后来被nodejs和reactjs的构架深深震撼，感觉自己从前在mvc结构做网站开发实在是太清亡了这种感觉。nodejs的好处和牛逼想必大家都知道了，受到这种重前端，后端全部放在database用api打包发给前端的启发。决定干脆做个0后端的网站。最后某天梦里惊做起发现可以用发新郎微博的方法来储存后台数据。干脆把微博作为自己的数据库，利用新郎的api直接发给nodejs。然而国内服务器有延迟，申请新浪api又要注册账号。。后来居然发现可以用github post issue的方式发文章，然后用git来做网站。 
 
 卧槽瞬间爽炸。。没有数据库了。。没有后台了。。什么query，sql 操作，后台逻辑，前端调试，字体渲染。。瞬间消失。后台操作变成发微博文章。。改微博文章。。
@@ -8,13 +12,11 @@
 
 后来。。后来发现果然这个根本前人已经在做了。天猫的招聘界面就是用github nodejs搭建的，淘宝也是。有点遗憾和开心。谢谢你来看我的github哈，如果有什么建议请务必告诉我。
 
-Link to new website: [lyulyulyu.com ver2.0](https://www.lyulyulyu.com)
-
 This is my new personal website in NodeJs and ReactJs. Most most interesting feature is to use github issue to post data. Zerooooooo backend. Everthing is in the front. All of the data are stored in github issue page.
 
 The old website repo is: [Project_mywebsite_1.0](https://github.com/nlyu/Projects_mywebsite)
 
-Link to old website: [lyulyulyu.com](http://nlyu2.web.engr.illinois.edu/)
+Link to old website(server down): [lyulyulyu.com](http://nlyu2.web.engr.illinois.edu/)
 
 New website
 
@@ -27,6 +29,13 @@ Old website
  
 # Installation & Run
 
+To run it in your own computer (IMPORTANT!)
+
+change line 178 in webpack.config.js to 
+```
+     host: '127.0.0.1',   //overwise it would be 0.0.0.0 where you need your own IP to access
+```
+need node js > 8.0
 
 ```
  npm install
@@ -36,4 +45,4 @@ Old website
  npm start
 ```
 
-See web page in localhost:9000
+See web page in localhost:9000 (only accessible in your own PC)
