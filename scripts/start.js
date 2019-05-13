@@ -10,6 +10,6 @@ process.env.NODE_ENV = 'development';
 require('webpack-dev-server/bin/webpack-dev-server');
 
 setTimeout(
-    openBrowser.bind(null, 'localhost:' + config.devServer.port),
+    openBrowser.bind(null, '0.0.0.0:' + config.devServer.port),
     5000
 );
