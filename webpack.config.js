@@ -177,6 +177,10 @@ module.exports = function (env) {
             compress: true,
             host: HOST,
             port: PORT,
+            disableHostCheck: true, //允许别的host也可以运行这个project，重要！！
+            // allowedHosts: [
+            //   '.amazonaws.com'
+            // ],
             publicPath: '/',
             // 设置代理，比如，请求 /api/abc 会代理制 http://localhost:7000/abc
             // https://webpack.js.org/configuration/dev-server/#devserver-proxy
